@@ -3,7 +3,7 @@ package geom
 import (
 	"fmt"
 
-	"github.com/rockwell-uk/go-text/text"
+	"github.com/db-tech-uk/go-text/text"
 	geos "github.com/twpayne/go-geos"
 )
 
@@ -71,7 +71,7 @@ func (ld MultiLineData) ToGeom(origin []float64) (*geos.Geom, error) {
 }
 
 func TransposeMultiLineData(in text.MultiLineData) MultiLineData {
-	out := MultiLineData{}
+	out := make(MultiLineData, 0, len(in))
 
 	for _, lineData := range in {
 		out = append(out, LineData(lineData))

@@ -6,8 +6,8 @@ import (
 	"image/draw"
 	"testing"
 
+	godraw "github.com/db-tech-uk/go-draw/draw"
 	"github.com/llgcode/draw2d/draw2dimg"
-	godraw "github.com/rockwell-uk/go-draw/draw"
 )
 
 func TestCircle(t *testing.T) {
